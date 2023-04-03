@@ -19,30 +19,25 @@ end
 require 'json'
 
 def main
-  data = {
-    'title' => 'O-Launcher',
-    'rules' => [
-      {
-        'description' => 'O-Launcher',
-        'manipulators' => [
-          generate_launcher_mode('b', [], [{ 'shell_command' => "open -a Obsidian.app" }]),
-          generate_launcher_mode('c', [], [{ 'shell_command' => "open -a 'Google Chrome.app'" }]),
-          generate_launcher_mode('e', [], [{ 'shell_command' => "open -a Session.app" }]),
-          generate_launcher_mode('g', [], [{ 'shell_command' => "open -a Goland.app" }]),
-          generate_launcher_mode('i', [], [{ 'shell_command' => "open -a iTerm.app" }]),
-          generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'IntelliJ IDEA.app'" }]),
-          generate_launcher_mode('k', [], [{ 'shell_command' => "open -a KakaoTalk.app" }]),
-          generate_launcher_mode('m', [], [{ 'shell_command' => "open -a Mail.app" }]),
-          generate_launcher_mode('s', [], [{ 'shell_command' => "open -a Safari.app" }]),
-          generate_launcher_mode('t', [], [{ 'shell_command' => "open -a Todoist.app" }]),
-          generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
-          generate_launcher_mode('w', [], [{ 'shell_command' => "open -a 'KakaoWork.app'" }]),
-        ].flatten,
-      },
-    ],
+  rule = {
+    'description' => 'O-Launcher-Custom',
+    'manipulators' => [
+      generate_launcher_mode('b', [], [{ 'shell_command' => "open -a Obsidian.app" }]),
+      generate_launcher_mode('c', [], [{ 'shell_command' => "open -a 'Google Chrome.app'" }]),
+      generate_launcher_mode('e', [], [{ 'shell_command' => "open -a Session.app" }]),
+      generate_launcher_mode('g', [], [{ 'shell_command' => "open -a Goland.app" }]),
+      generate_launcher_mode('i', [], [{ 'shell_command' => "open -a iTerm.app" }]),
+      generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'IntelliJ IDEA.app'" }]),
+      generate_launcher_mode('k', [], [{ 'shell_command' => "open -a KakaoTalk.app" }]),
+      generate_launcher_mode('m', [], [{ 'shell_command' => "open -a Mail.app" }]),
+      generate_launcher_mode('s', [], [{ 'shell_command' => "open -a Safari.app" }]),
+      generate_launcher_mode('t', [], [{ 'shell_command' => "open -a Todoist.app" }]),
+      generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
+      generate_launcher_mode('w', [], [{ 'shell_command' => "open -a 'KakaoWork.app'" }]),
+    ].flatten,
   }
 
-  puts JSON.pretty_generate(data)
+  puts JSON.pretty_generate(rule)
 end
 
 def generate_launcher_mode(from_key_code, mandatory_modifiers, to)

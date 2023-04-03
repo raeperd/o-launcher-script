@@ -30,6 +30,7 @@ def main
       generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'IntelliJ IDEA.app'" }]),
       generate_launcher_mode('k', [], [{ 'shell_command' => "open -a KakaoTalk.app" }]),
       generate_launcher_mode('m', [], [{ 'shell_command' => "open -a Mail.app" }]),
+      generate_launcher_mode('p', [], [{ 'shell_command' => "open -a Postman.app" }]),
       generate_launcher_mode('s', [], [{ 'shell_command' => "open -a Safari.app" }]),
       generate_launcher_mode('t', [], [{ 'shell_command' => "open -a Todoist.app" }]),
       generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),

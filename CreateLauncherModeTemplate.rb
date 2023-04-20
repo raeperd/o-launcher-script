@@ -22,6 +22,7 @@ def main
   rule = {
     'description' => 'O-Launcher-Custom',
     'manipulators' => [
+      generate_launcher_mode('a', [], [{ 'shell_command' => "open -a Arc.app" }]),
       generate_launcher_mode('b', [], [{ 'shell_command' => "open -a Obsidian.app" }]),
       generate_launcher_mode('c', [], [{ 'shell_command' => "open -a 'Google Chrome.app'" }]),
       generate_launcher_mode('e', [], [{ 'shell_command' => "open -a Session.app" }]),

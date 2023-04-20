@@ -2,3 +2,5 @@
 
 assets
 automatic_backups
+
+*.json

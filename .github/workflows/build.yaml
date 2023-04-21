@@ -1,0 +1,13 @@
+on: [push]
+jobs:
+  build-karabiner-rule:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ruby CreateLauncherModeTemplate.rb > rule.json
+      - run: cat rule.json
+      - uses: actions/upload-artifact@v3
+        with:
+          name: rule
+          path: rule.json
+          if-no-files-found: error 

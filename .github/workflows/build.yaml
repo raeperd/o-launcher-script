@@ -8,6 +8,6 @@ jobs:
       - run: cat rule.json
       - uses: actions/upload-artifact@v3
         with:
-          name: rule.json
+          name: rule
           path: rule.json
           if-no-files-found: error 

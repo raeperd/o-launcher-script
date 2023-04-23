@@ -11,3 +11,7 @@ jobs:
           name: rule
           path: rule.json
           if-no-files-found: error 
+      - uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}

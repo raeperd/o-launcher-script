@@ -19,9 +19,9 @@ end
 require 'json'
 
 def main
-  title = 'o-launcher v1.1.0'
+  title = 'o-launcher v1.3.0'
   rule = {
-    'description' => 'o-launcher v1.1.0',
+    'description' => 'o-launcher v1.3.0',
     'manipulators' => [
       generate_launcher_mode('a', [], [{ 'shell_command' => "open -a Arc.app" }]),
       generate_launcher_mode('c', [], [{ 'shell_command' => "open -a Arc.app" }]),
@@ -33,7 +33,10 @@ def main
       generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'Intellij IDEA Ultimate.app'" }]),
       generate_launcher_mode('k', [], [{ 'shell_command' => "open -a KakaoTalk.app" }]),
       generate_launcher_mode('p', [], [{ 'shell_command' => "open -a Postman.app" }]),
-      generate_launcher_mode('t', [], [{ 'shell_command' => "open -a TickTick.app" }]),
+      generate_launcher_mode('d', [], [{ 'shell_command' => "open -a Todoist.app" }]),
+      generate_launcher_mode('t', [], [{ 'shell_command' => "open -a Todoist.app" }]),
+      generate_launcher_mode('e', [], [{ 'shell_command' => "open -a Session.app" }]),
+      generate_launcher_mode('s', [], [{ 'shell_command' => "open -a Session.app" }]),
       generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
       generate_launcher_mode('w', [], [{ 'shell_command' => "open -a 'KakaoWork.app'" }]),
     ].flatten,

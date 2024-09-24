@@ -19,16 +19,17 @@ end
 require 'json'
 
 def main
-  title = 'o-launcher v1.3.0'
+  version = 'v1.4.0'
+  title = 'o-launcher ' << version
   rule = {
-    'description' => 'o-launcher v1.3.0',
+    'description' => 'o-launcher ' << version,
     'manipulators' => [
       generate_launcher_mode('a', [], [{ 'shell_command' => "open -a Arc.app" }]),
       generate_launcher_mode('c', [], [{ 'shell_command' => "open -a Arc.app" }]),
       generate_launcher_mode('b', [], [{ 'shell_command' => "open -a Obsidian.app" }]),
       generate_launcher_mode('g', [], [{ 'shell_command' => "open -a Goland.app" }]),
       generate_launcher_mode('i', [], [{ 'shell_command' => "open -a Wezterm.app" }]),
-      generate_launcher_mode('m', [], [{ 'shell_command' => "open -a Wezterm.app" }]),
+      generate_launcher_mode('m', [], [{ 'shell_command' => "open -a Mail.app" }]),
       generate_launcher_mode('z', [], [{ 'shell_command' => "open -a Wezterm.app" }]),
       generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'Intellij IDEA Ultimate.app'" }]),
       generate_launcher_mode('k', [], [{ 'shell_command' => "open -a KakaoTalk.app" }]),

@@ -4,14 +4,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: ruby CreateLauncherModeTemplate.rb > rule.json
-      - run: cat rule.json
+      - run: make OUTPUT=olauncher.json
+      - run: cat olauncher.json
       - uses: actions/upload-artifact@v3
         with:
-          name: rule
-          path: rule.json
+          name: olauncher.json
+          path: olauncher.json
           if-no-files-found: error 
-      - uses: sarisia/actions-status-discord@v1
-        if: always()
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}

@@ -19,7 +19,7 @@ end
 require 'json'
 
 def main
-  version = 'v1.7.0'
+  version = 'v1.7.1'
   title = 'o-launcher ' << version
   rule = {
     'description' => 'o-launcher ' << version,
@@ -36,7 +36,7 @@ def main
       generate_launcher_mode('e', [], [{ 'shell_command' => "open -a Session.app" }]),
       generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
       generate_launcher_mode('w', [], [{ 'shell_command' => "open -a 'KakaoWork.app'" }]),
-      generate_launcher_mode('z', [], [{ 'shell_command' => "open -a 'Zen Browser.app'" }]),
+      generate_launcher_mode('z', [], [{ 'shell_command' => "open -a 'Zen.app'" }]),
     ].flatten,
   }
 

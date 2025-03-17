@@ -19,13 +19,13 @@ end
 require 'json'
 
 def main
-  version = 'v1.7.1'
+  version = 'v1.8.0'
   title = 'o-launcher ' << version
   rule = {
     'description' => 'o-launcher ' << version,
     'manipulators' => [
-      generate_launcher_mode('a', [], [{ 'shell_command' => "open -a Arc.app" }]),
       generate_launcher_mode('b', [], [{ 'shell_command' => "open -a Obsidian.app" }]),
+      generate_launcher_mode('d', [], [{ 'shell_command' => "open -a Vivaldi.app" }]),
       generate_launcher_mode('g', [], [{ 'shell_command' => "open -a Ghostty.app" }]),
       generate_launcher_mode('i', [], [{ 'shell_command' => "open -a Ghostty.app" }]),
       generate_launcher_mode('m', [], [{ 'shell_command' => "open -a Mail.app" }]),
@@ -33,9 +33,7 @@ def main
       generate_launcher_mode('k', [], [{ 'shell_command' => "open -a KakaoTalk.app" }]),
       generate_launcher_mode('p', [], [{ 'shell_command' => "open -a Postman.app" }]),
       generate_launcher_mode('t', [], [{ 'shell_command' => "open -a TickTick.app" }]),
-      generate_launcher_mode('e', [], [{ 'shell_command' => "open -a Session.app" }]),
       generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
-      generate_launcher_mode('w', [], [{ 'shell_command' => "open -a 'KakaoWork.app'" }]),
       generate_launcher_mode('z', [], [{ 'shell_command' => "open -a 'Zen.app'" }]),
     ].flatten,
   }

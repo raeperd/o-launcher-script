@@ -19,7 +19,7 @@ end
 require 'json'
 
 def main
-  version = 'v1.8.0'
+  version = 'v1.8.1'
   title = 'o-launcher ' << version
   rule = {
     'description' => 'o-launcher ' << version,
@@ -32,6 +32,7 @@ def main
       generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'Intellij IDEA Ultimate.app'" }]),
       generate_launcher_mode('k', [], [{ 'shell_command' => "open -a KakaoTalk.app" }]),
       generate_launcher_mode('p', [], [{ 'shell_command' => "open -a Postman.app" }]),
+      generate_launcher_mode('s', [], [{ 'shell_command' => "open -a Spotify.app" }]),
       generate_launcher_mode('t', [], [{ 'shell_command' => "open -a TickTick.app" }]),
       generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
       generate_launcher_mode('z', [], [{ 'shell_command' => "open -a 'Zen.app'" }]),

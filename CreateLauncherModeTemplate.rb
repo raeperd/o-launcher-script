@@ -19,11 +19,12 @@ end
 require 'json'
 
 def main
-  version = 'v1.9.0'
+  version = 'v1.10.0'
   title = 'o-launcher ' << version
   rule = {
     'description' => 'o-launcher ' << version,
     'manipulators' => [
+      generate_launcher_mode('a', [], [{ 'shell_command' => "open -a TablePlus.app" }]),
       generate_launcher_mode('b', [], [{ 'shell_command' => "open -a Obsidian.app" }]),
       generate_launcher_mode('c', [], [{ 'shell_command' => "open -a Cursor.app" }]),
       generate_launcher_mode('d', [], [{ 'shell_command' => "open -a Vivaldi.app" }]),
@@ -34,6 +35,7 @@ def main
       generate_launcher_mode('k', [], [{ 'shell_command' => "open -a Slack.app" }]),
       generate_launcher_mode('p', [], [{ 'shell_command' => "open -a Spotify.app" }]),
       generate_launcher_mode('s', [], [{ 'shell_command' => "open -a Slack.app" }]),
+      generate_launcher_mode('q', [], [{ 'shell_command' => "open -a TablePlus.app" }]),
       generate_launcher_mode('t', [], [{ 'shell_command' => "open -a TickTick.app" }]),
       generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
       generate_launcher_mode('z', [], [{ 'shell_command' => "open -a 'Vivaldi.app'" }]),

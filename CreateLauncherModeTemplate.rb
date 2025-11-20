@@ -17,9 +17,8 @@ end
 ############################################################
 
 require 'json'
-
 def main
-  version = 'v1.11.1'
+  version = 'v1.13.0'
   title = 'o-launcher ' << version
   rule = {
     'description' => 'o-launcher ' << version,
@@ -27,17 +26,13 @@ def main
       generate_launcher_mode('a', [], [{ 'shell_command' => "open -a TablePlus.app" }]),
       generate_launcher_mode('b', [], [{ 'shell_command' => "open -a Obsidian.app" }]),
       generate_launcher_mode('c', [], [{ 'shell_command' => "open -a Cursor.app" }]),
-      generate_launcher_mode('d', [], [{ 'shell_command' => "open -a Vivaldi.app" }]),
-      generate_launcher_mode('g', [], [{ 'shell_command' => "open -a Ghostty.app" }]),
+      generate_launcher_mode('h', [], [{ 'shell_command' => "open -a Helium.app" }]),
       generate_launcher_mode('i', [], [{ 'shell_command' => "open -a Ghostty.app" }]),
       generate_launcher_mode('m', [], [{ 'shell_command' => "open -a Mail.app" }]),
-      generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'Intellij IDEA Ultimate.app'" }]),
       generate_launcher_mode('k', [], [{ 'shell_command' => "open -a Slack.app" }]),
-      generate_launcher_mode('p', [], [{ 'shell_command' => "open -a Spotify.app" }]),
+      generate_launcher_mode('j', [], [{ 'shell_command' => "open -a 'Intellij IDEA Ultimate.app'" }]),
       generate_launcher_mode('s', [], [{ 'shell_command' => "open -a Slack.app" }]),
-      generate_launcher_mode('q', [], [{ 'shell_command' => "open -a TablePlus.app" }]),
       generate_launcher_mode('t', [], [{ 'shell_command' => "open -a TickTick.app" }]),
-      generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
       generate_launcher_mode('z', [], [{ 'shell_command' => "open -a Zoom.us" }]),
     ].flatten,
   }
